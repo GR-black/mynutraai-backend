@@ -291,5 +291,5 @@ app.get("/listar-planos", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
+  console.log(`Server is running on port ${port}`);
 });
