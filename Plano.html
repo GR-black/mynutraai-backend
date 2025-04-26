@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano Nutra AI</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            text-align: center;
+        }
+        .logo img {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        h2 {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .section {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f8f8f8;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #f8f8f8;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container" id="pdf-content">
+        <h6 style="text-align: center;">Plano Oficial Nutra AI ©</h6>
+        <h6 style="text-align: center;"> SEU PLANO DE TREINO E DIETA PERSONALIZADO!</h6>
+
+        <div class="logo">
+            <img src="../front/Imagens/nutralogonobg.png" alt="Logo">
+        </div>
+
+        <h2>Dados do Usuário</h2>
+        <table>
+            <tr><th>Nome</th><td id="nome">Carregando...</td></tr>
+            <tr><th>Idade</th><td id="idade">Carregando...</td></tr>
+            <tr><th>Peso</th><td id="peso">Carregando...</td></tr>
+            <tr><th>Altura</th><td id="altura">Carregando...</td></tr>
+            <tr><th>Sexo</th><td id="genero">Carregando...</td></tr>
+            <tr><th>Objetivo</th><td id="objetivo">Carregando...</td></tr>
+        </table>
+
+        <h2>Plano Personalizado</h2>
+        <div class="section">
+            <p id="plano">Carregando...</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
