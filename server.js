@@ -184,7 +184,20 @@ async function gerarTreinoEDieta(userData) {
 
 // Função para gerar PDF usando Puppeteer e preencher a página HTML
 async function gerarPDF(plano, nomeArquivo) {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-accelerated-2d-canvas",
+      "--no-first-run",
+      "--no-zygote",
+      "--single-process", 
+      "--disable-gpu"
+    ],
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/google-chrome',
+    headless: true,
+  });
   const page = await browser.newPage();
   
   // Carregar o conteúdo da página PLANOS.html
