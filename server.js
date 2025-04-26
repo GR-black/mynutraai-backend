@@ -5,7 +5,7 @@ const { OpenAI } = require('openai');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-const puppeteer = require('puppeteer');  // Importando o Puppeteer
+const puppeteer = require('puppeteer');
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -181,6 +181,15 @@ async function gerarTreinoEDieta(userData) {
     return { error: "Erro ao gerar plano" };
   }
 }
+
+const puppeteer = require('puppeteer-core');
+
+const browser = await puppeteer.launch({
+  headless: true,
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable', // Use a variável de ambiente
+});
+
 
 // Função para gerar PDF usando Puppeteer e preencher a página HTML
 async function gerarPDF(plano, nomeArquivo) {
