@@ -10,7 +10,11 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(express.json());
-app.use(cors()); // Permite requisições do front-end
+app.use(cors({
+  origin: 'https://mynutraai.com', // libera só pro seu site
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 app.use(express.static('public')); // Para servir arquivos estáticos
 
 // Configuração da API OpenAI
