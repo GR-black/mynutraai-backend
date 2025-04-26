@@ -204,7 +204,7 @@ async function gerarPDF(plano, nomeArquivo) {
       "--single-process", 
       "--disable-gpu"
     ],
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/google-chrome',
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/chromium-browser',
     headless: true,
   });
   const page = await browser.newPage();
