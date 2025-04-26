@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');  // Importando o Puppeteer
 const app = express();
-const PORT = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(cors()); // Permite requisições do front-end
